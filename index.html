@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--Starpage by -->
+<html>
+	<head>
+		<title>Welcome</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" style="text/css" href="general.css" />
+	</head>
+
+	<body>	
+		<div class="main" id="main1" style="display: block">
+			<img class="image-wrapper" src="img/side6.gif"/>
+			<header>
+            	<h1>Welcome, <span class="flair">L L u f a n s y a</span></h1>
+                <h2 class="litequote">================================================================================== <br>  <span class="flair">========================================================================</span></h2>
+			</header>
+
+			<!-- <div>
+				<form action="https://google.com/" method="GET" autocomplete="off">
+					<label for="q">></label>
+						<input autofocus
+						id="q"
+			        	name="q"
+						type="search"
+						placeholder="Search with Google...">
+				</form>
+			</div> -->
+
+            <nav>
+            	<ul class="blue">
+            		<a>SocialMedia</a>
+            			<li><a href="https://github.com/Lufansya">Github</a></li>
+            			<li><a href="https://twitter.com/home">Twitter</a></li>
+            			<li><a href="https://facebook.com/">Facebook</a></li>
+            			<li><a href="https://instagram.com/">Instagram</a></li>
+            	</ul>
+
+            	<ul class="green">
+            		<a>Programming</a>
+            			<li><a href="http://stackoverflow.com/">Stackoverflow</a></li>
+                    	<li><a href="http://w3schools.com/">W3 Schools</a></li>
+                    	<li><a href="http://sololearn.com/">SoloLearn</a></li>
+                    	<li><a href="https://petanikode.com/">Petani Kode</a></li>
+                </ul>
+
+                <ul class="red">
+            		<a>Entertainment</a>
+            			<li><a href="https://www.youtube.com/">Youtube</a></li>
+            			<li><a href="https://www.twitch.tv/">Twitch</a></li>
+            			<li><a href="https://www.reddit.com/">Reddit</a></li>
+            			<li><a href="https://www.bilibili.tv/id/anime">BStation</a></li>
+
+            	</ul>
+
+                <ul class="yellow">
+            		<a>Miscellaneous</a>
+            			<li><a href="https://gmail.com">Gmail</a></li>
+            			<li><a href="localhost:8080/phpmyadmin">Database</a></li>
+            			<li><a href="localhost:8080/">Localhost</a></li>
+            			<li><a href="https://pastebin.com/">Pastebin</a></li>
+            	</ul>
+
+            </nav>
+    	</div>
+
+        <div class="main" id="main2" style="display: none;">
+        	<img class="image-wrapper" src="img/side5.gif"/>
+
+        	<iframe  src="https://www.youtube.com/embed/DrxJCOVsV1E?list=PLNqBorCQlYFPf4cvVUi-1pet0tO_J1x-9" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        
+        <div class="bottomcontainer">
+
+        	<!--Button script-->
+			<script type="text/javascript">
+			function show( show1 ) {
+			  document.getElementById(show1).style.display="block";
+			}
+			function hide( hide1 ) {
+			  document.getElementById(hide1).style.display="none";
+			}
+			function tog( tog1 ) {
+			  document.getElementById(tog1).style.backgroundColor="#0972D6";
+			}
+			function toh( toh1 ) {
+			  document.getElementById(toh1).style.backgroundColor="#FFFFFF";
+			}
+			</script>
+
+			<div class="button" id="btn1" onclick = "show('main1');hide('main2');tog('btn1');toh('btn2');"></div>
+			<div class="button" id="btn2" onclick = "show('main2');hide('main1');tog('btn2');toh('btn1');"></div>
+
+			<!--Live clock script-->
+			<div class="time" id="time">
+				<script>
+					//document.getElementById("main").innerHTML = Date();
+					function updateClock() {
+						var days = ['SUNDAY','MONDAY','TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY'];
+						var m = new Date();
+						var dateString =
+						  (days[ m.getDay() ]) + " " +
+						  ("0" + m.getDate()).slice(-2) + "/" +
+						  ("0" + (m.getMonth()+1)).slice(-2) +"/"+
+						  m.getFullYear() +" "+
+						  ("0" + m.getHours()).slice(-2) + ":" +
+						  ("0" + m.getMinutes()).slice(-2) + ":" +
+						  ("0" + m.getSeconds()).slice(-2);
+						
+						// set the content of the element with the ID time to the formatted string
+						document.getElementById('time').innerHTML = dateString;
+
+						// call this function again in 1000ms
+						setTimeout(updateClock, 1000);
+					}
+					updateClock(); // initial call
+				</script>
+        </div>
+        <div class="lovetext">愛を込めて作られた</div>
+    </div>
